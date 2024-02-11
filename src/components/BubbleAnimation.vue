@@ -25,7 +25,7 @@ export default {
     top: 0;
     left: 0;
     width: 95%;
-    height: 100%;
+    height: 130%;
     margin: 0;
     padding: 0;
 }
@@ -34,7 +34,7 @@ export default {
     position: absolute;
     bottom: 0;
     left: 0;
-    width: 100%;
+    width: 95%;
     height: 100%;
     overflow: hidden;
     margin: 0;

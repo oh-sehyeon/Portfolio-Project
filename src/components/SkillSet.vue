@@ -34,6 +34,7 @@ export default {
 }
 
 #skillset_section > .skill_text{
+    text-align: center;
     font-size: 2.25rem;
     color: white;
     margin: 3rem 0 3rem;
