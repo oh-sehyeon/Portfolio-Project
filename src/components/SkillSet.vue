@@ -38,7 +38,7 @@ export default {
     color: white;
     margin: 3rem 0 3rem;
     text-shadow: #DADADA 1px 0 12px;
-    animation: glow 7s ease-in-out infinite alternate;
+    animation: glow 3s ease-in-out infinite alternate;
 }
 
 @keyframes glow {
@@ -46,7 +46,7 @@ export default {
         text-shadow: #DADADA 1px 0 5px;
     }
     to {
-        text-shadow: #DADADA 1px 0 50px;
+        text-shadow: #DADADA 1px 0 80px;
     }
 }
 

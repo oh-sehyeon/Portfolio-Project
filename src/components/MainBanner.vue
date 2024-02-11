@@ -23,7 +23,7 @@ export default {
     height: 25rem;
     width: 100%;
     opacity: .7;
-    box-shadow: inset 0 0 3500px black;
+    box-shadow: inset 0 0 350px black;
 }
 
 #banner_section > div > h1 {
