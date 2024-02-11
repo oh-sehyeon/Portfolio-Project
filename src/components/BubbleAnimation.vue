@@ -24,8 +24,8 @@ export default {
     position: absolute;
     top: 0;
     left: 0;
-    width: 95%;
-    height: 130%;
+    width: 93%;
+    height: 145%;
     margin: 0;
     padding: 0;
 }
@@ -34,7 +34,7 @@ export default {
     position: absolute;
     bottom: 0;
     left: 0;
-    width: 95%;
+    width: 93%;
     height: 100%;
     overflow: hidden;
     margin: 0;
@@ -107,4 +107,10 @@ export default {
     }
 }
 /* Bubble Animation End */
+
+@media screen and (min-width: 769px) {
+    .animation-area {
+        height: 130%;
+    }
+}
 </style>
