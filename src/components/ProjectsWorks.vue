@@ -1,6 +1,6 @@
 <template>
     <section id="projectsWorks_section">
-        <h4>Check my latest Projects:</h4>
+        <h4>Check my latest Projects</h4>
         <div class="projects_container">
             <a href="https://github.com/ansonsow/rhealm" class="project" target="_blank">
                 <div id="colourfit"></div>
