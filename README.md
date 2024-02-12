@@ -1,4 +1,10 @@
-# sehyeon-portfolio
+# Se Hyeon's Portfolio Website Project
+
+This is a public repository that contains the source code of my Portfolio Website, which was created with VUE.
+
+link for the portfolio site:
+https://oh-sehyeon.github.io/
+
 
 ## Project setup
 ```
