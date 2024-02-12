@@ -44,6 +44,7 @@ export default {
 }
 
 #career_section > .job {
+    box-sizing: border-box;
     width: 100%;
     display: flex;
     flex-direction: row;
