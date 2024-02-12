@@ -46,6 +46,7 @@ export default {
     font-weight: lighter;
     font-size: 1rem;
     letter-spacing: .3px;
+    line-height: 150%;
 }
 
 @media screen and (min-width: 769px) {

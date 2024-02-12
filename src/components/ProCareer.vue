@@ -83,6 +83,7 @@ export default {
 .job_period,
 .tech_used {
     font-size: .7rem;
+    line-height: 150%;
 }
 
 #career_section > .job > .job_details > .tech_used {

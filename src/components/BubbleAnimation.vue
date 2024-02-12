@@ -25,7 +25,7 @@ export default {
     top: 0;
     left: 0;
     width: 93%;
-    height: 145%;
+    height: 120%;
     margin: 0;
     padding: 0;
 }

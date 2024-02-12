@@ -3,8 +3,8 @@
         <p class="contactme_text">Contact Me</p>
         <p class="contact_email">eden.cchord@gmail.com</p>
         <div class="sns_links">
-            <a href="https://github.com/sehyeon-oh" id="github_link"><img src="../assets/sns_images/github.png" alt="Github Image"></a>
-            <a href="https://www.linkedin.com/in/se-hyeon-oh/" id="linkedin_link"><img src="../assets/sns_images/linkedin.png" alt="Linkedin Image"></a>
+            <a href="https://github.com/oh-sehyeon" id="github_link" target="_blank"><img src="../assets/sns_images/github.png" alt="Github Image"></a>
+            <a href="https://www.linkedin.com/in/se-hyeon-oh/" id="linkedin_link" target="_blank"><img src="../assets/sns_images/linkedin.png" alt="Linkedin Image"></a>
         </div>
     </section>
 </template>
