@@ -79,6 +79,7 @@ export default {
     padding: 0 5%;
     font-size: 1.75rem;
     margin-bottom: 2rem;
+    text-align: center;
 }
 
 #projectsWorks_section > .projects_container {
