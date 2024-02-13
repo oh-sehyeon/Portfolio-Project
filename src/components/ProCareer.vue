@@ -1,27 +1,11 @@
 <template>
     <section id="career_section">
-        <div class="job">
-            <img src="../assets/job_logos/valtech_logo.png" alt="Valtech Logo">
+        <div v-for="(job, index) in jobs" :key="index" class="job">
+            <img :src="job.logo" :alt="job.companyName + ' Logo'">
             <div class="job_details">
-                <span class="job_title">Frontend Developer</span>
-                <span class="job_period">2021 - 2022</span>
-                <span class="tech_used">Vue, Node JS, Sass, GIT, Bitbucket, JIRA, Fractal, Unicorn</span>
-            </div>
-        </div>
-        <div class="job">
-            <img src="../assets/job_logos/lg-cns-logo.png" alt="LG CNS Logo">
-            <div class="job_details">
-                <span class="job_title">Junior System Analyst</span>
-                <span class="job_period">2019 - 2021</span>
-                <span class="tech_used">PHP, Java, HTML, CSS, JavaScript, PLSQL, JIRA, TortoiseSVN</span>
-            </div>
-        </div>
-        <div class="job">
-            <img src="../assets/job_logos/lg-cns-logo.png" alt="LG CNS Logo">
-            <div class="job_details">
-                <span class="job_title">Support and Infra Assistant</span>
-                <span class="job_period">2017 - 2019</span>
-                <span class="tech_used">VPN managenment, Hardware issue troubleshooting, N/W issue management, OS image creation, User support</span>
+                <span class="job_title">{{ job.title }}</span>
+                <span class="job_period">{{ job.period }}</span>
+                <span class="tech_used">{{ job.techUsed }}</span>
             </div>
         </div>
     </section>
@@ -30,6 +14,33 @@
 <script>
 export default {
     name: 'ProCareer',
+    data() {
+        return {
+            jobs: [
+                {
+                    companyName: 'Valtech',
+                    logo: require('../assets/job_logos/valtech_logo.png'),
+                    title: 'Frontend Developer',
+                    period: '2021 - 2022',
+                    techUsed: 'Vue, Node JS, Sass, GIT, Bitbucket, JIRA, Fractal, Unicorn'
+                },
+                {
+                    companyName: 'LG CNS',
+                    logo: require('../assets/job_logos/lg-cns-logo.png'),
+                    title: 'Junior System Analyst',
+                    period: '2019 - 2021',
+                    techUsed: 'PHP, Java, HTML, CSS, JavaScript, PLSQL, JIRA, TortoiseSVN'
+                },
+                {
+                    companyName: 'LG CNS',
+                    logo: require('../assets/job_logos/lg-cns-logo.png'),
+                    title: 'Support and Infra Assistant',
+                    period: '2017 - 2019',
+                    techUsed: 'VPN management, Hardware issue troubleshooting, N/W issue management, OS image creation, User support'
+                }
+            ]
+        };
+    }
 }
 </script>
 

@@ -44,10 +44,10 @@ export default {
 
 @keyframes glow {
     from {
-        text-shadow: #F0F0F0 1px 0 1px;
+        text-shadow: #F0F0F0 1px 0 0px;
     }
     to {
-        text-shadow: #F0F0F0 1px 0 10px;
+        text-shadow: #FFE799 1px 0 30px;
     }
 }
 

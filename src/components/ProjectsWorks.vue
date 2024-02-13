@@ -1,40 +1,12 @@
 <template>
     <section id="projectsWorks_section">
-        <h4>Check my latest Projects</h4>
+        <h4>Check out my latest Projects</h4>
         <div class="projects_container">
-            <a href="https://github.com/ansonsow/rhealm" class="project" target="_blank">
-                <div id="colourfit"></div>
+            <a v-for="(project, index) in projects" :key="index" :href="project.url" class="project" target="_blank">
+                <div :id="project.id"></div>
                 <div class="project_details">
-                    <p class="project_name">ColourFit</p>
-                    <p class="project_info">Project made for Langara College's Capstone project. Worked as Full-Stack developer using ExpressJS, React Native and NodeJS combining with MongoDB and Firebase Storage.</p>
-                </div>
-            </a>
-            <a href="https://github.com/mahzinhaaugusto/gallop" class="project" target="_blank">
-                <div id="gallop"></div>
-                <div class="project_details">
-                    <p class="project_name">Gallop</p>
-                    <p class="project_info">Term project made for Langara Collge's 3rd term. Worked as the main Front-End developer using ReactJS, Firebase Storage and NodeJS.</p>
-                </div>
-            </a>
-            <a href="https://github.com/oh-sehyeon/people-cars" class="project" target="_blank">
-                <div id="peoplecars"></div>
-                <div class="project_details">
-                    <p class="project_name">People & Cars</p>
-                    <p class="project_info">Web application made using React, Apollo and GraphQL. This application let user to add new User, add cars to users as well as it is posible to edit and delete both users and cars.</p>
-                </div>
-            </a>
-            <a href="https://github.com/oh-sehyeon/moviesApp" class="project" target="_blank">
-                <div id="moviesapp"></div>
-                <div class="project_details">
-                    <p class="project_name">MoviesApp</p>
-                    <p class="project_info">React Native App made to search for Movies and TV Shows through TMDB API.</p>
-                </div>
-            </a>
-            <a href="https://oh-sehyeon.github.io/snake-game/" class="project" target="_blank">
-                <div id="snakegame"></div>
-                <div class="project_details">
-                    <p class="project_name">Snake Game</p>
-                    <p class="project_info">Classic Snake game made with HTML, CSS and Vanilla JavaScript.</p>
+                    <p class="project_name">{{ project.name }}</p>
+                    <p class="project_info">{{ project.description }}</p>
                 </div>
             </a>
         </div>
@@ -44,6 +16,42 @@
 <script>
 export default {
     name: 'ProjectsWorks',
+    data() {
+        return {
+            projects: [
+                {
+                    id: 'colourfit',
+                    name: 'ColourFit',
+                    url: 'https://github.com/ansonsow/rhealm',
+                    description: 'Project made for Langara College\'s Capstone project. Worked as Full-Stack developer using ExpressJS, React Native and NodeJS combining with MongoDB and Firebase Storage.'
+                },
+                {
+                    id: 'gallop',
+                    name: 'Gallop',
+                    url: 'https://github.com/mahzinhaaugusto/gallop',
+                    description: 'Term project made for Langara Collge\'s 3rd term. Worked as the main Front-End developer using ReactJS, Firebase Storage and NodeJS.'
+                },
+                {
+                    id: 'peoplecars',
+                    name: 'People & Cars',
+                    url: 'https://github.com/oh-sehyeon/people-cars',
+                    description: 'Web application made using React, Apollo and GraphQL. This application let user to add new User, add cars to users as well as it is posible to edit and delete both users and cars.'
+                },
+                {
+                    id: 'moviesapp',
+                    name: 'MoviesApp',
+                    url: 'https://github.com/oh-sehyeon/moviesApp',
+                    description: 'React Native App made to search for Movies and TV Shows through TMDB API.'
+                },
+                {
+                    id: 'snakegame',
+                    name: 'Snake Game',
+                    url: 'https://oh-sehyeon.github.io/snake-game/',
+                    description: 'Classic Snake game made with HTML, CSS and Vanilla JavaScript.'
+                }
+            ]
+        };
+    }
 }
 </script>
 
