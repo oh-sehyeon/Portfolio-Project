@@ -3,18 +3,26 @@
         <div class="typed_out">
             <h1>Looking for a <br>Developer?</h1>
         </div>
+        <BubbleAnimation />
     </section>
 </template>
 
 <script>
+import BubbleAnimation from './Global Functions/BubbleAnimation.vue'
+
 export default {
     name: 'MainBanner',
+
+    components: {
+        BubbleAnimation,
+    }
 }
 </script>
 
 <style scoped>
 
 #banner_section {
+    position: relative;
     display: flex;
     justify-content: center;
     align-items: center;

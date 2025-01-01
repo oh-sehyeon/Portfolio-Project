@@ -1,22 +1,37 @@
 <template>
     <section id="career_section">
         <div v-for="(job, index) in jobs" :key="index" class="job">
-            <img :src="job.logo" :alt="job.companyName + ' Logo'">
-            <div class="job_details">
-                <span class="job_title">{{ job.title }}</span>
-                <span class="job_period">{{ job.period }}</span>
-                <span class="tech_used">{{ job.techUsed }}</span>
-            </div>
+            <LazyLoad>
+                <img :src="job.logo" :alt="job.companyName + ' Logo'">
+                <div class="job_details">
+                    <span class="job_title">{{ job.title }}</span>
+                    <span class="job_period">{{ job.period }}</span>
+                    <span class="tech_used">{{ job.techUsed }}</span>
+                </div>
+            </LazyLoad>
         </div>
     </section>
 </template>
 
 <script>
+import LazyLoad from './Global Functions/LazyLoad.vue'
+
 export default {
+    components: {
+        LazyLoad,
+    },
+
     name: 'ProCareer',
     data() {
         return {
             jobs: [
+                {
+                    companyName: 'INI Solutions',
+                    logo: require('../assets/job_logos/ini-solutions_logo.png'),
+                    title: 'Frontend Developer and Support',
+                    period: '2024 - Now',
+                    techUsed: 'Vue, Node JS, Sass, POS Program issue troubleshooting, POS N/W issue management, User support'
+                },
                 {
                     companyName: 'Valtech',
                     logo: require('../assets/job_logos/valtech_logo.png'),
@@ -47,14 +62,15 @@ export default {
 <style scoped>
 
 #career_section {
+    position: relative;
     box-sizing: border-box;
-    background-color: #FAFAFA;
+    background-color: #FEFEFE;
     width: 100%;
     padding: 2rem 5%;
     box-shadow: inset 0 0 8px black;
 }
 
-#career_section > .job {
+#career_section > .job > .lazy-load-wrapper {
     box-sizing: border-box;
     width: 100%;
     display: flex;
@@ -69,11 +85,11 @@ export default {
     border-bottom: none;
 }
 
-#career_section > .job > img {
+#career_section > .job > .lazy-load-wrapper > img {
     width: 25%;
 }
 
-#career_section > .job > .job_details {
+#career_section > .job > .lazy-load-wrapper > .job_details {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -81,24 +97,24 @@ export default {
     margin-left: 1rem;
 }
 
-#career_section > .job > .job_details >
+#career_section > .job > .lazy-load-wrapper > .job_details >
 .job_title,
 .job_period {
     margin-bottom: 0.2rem;
 }
-#career_section > .job > .job_details > .job_title {
+#career_section > .job > .lazy-load-wrapper > .job_details > .job_title {
     font-weight: bold;
     font-size: .9rem;
 }
 
-#career_section > .job > .job_details >
+#career_section > .job > .lazy-load-wrapper > .job_details >
 .job_period,
 .tech_used {
     font-size: .7rem;
     line-height: 150%;
 }
 
-#career_section > .job > .job_details > .tech_used {
+#career_section > .job > .lazy-load-wrapper > .job_details > .tech_used {
     font-style: italic;
 }
 
@@ -108,27 +124,27 @@ export default {
         box-shadow: inset 0 0 10px black;
     }
 
-    #career_section > .job {
+    #career_section > .job > .lazy-load-wrapper {
         padding: 1rem;
     }
-    #career_section > .job > img {
+    #career_section > .job > .lazy-load-wrapper > img {
         width: 15%;
     }
 
-    #career_section > .job > .job_details {
+    #career_section > .job > .lazy-load-wrapper > .job_details {
         margin-left: 3rem;
     }
 
-    #career_section > .job > .job_details >
+    #career_section > .job > .lazy-load-wrapper > .job_details >
     .job_title,
     .job_period {
         margin-bottom: .25rem;
     }
-    #career_section > .job > .job_details > .job_title {
+    #career_section > .job > .lazy-load-wrapper > .job_details > .job_title {
         font-size: 1.25rem;
     }
 
-    #career_section > .job > .job_details >
+    #career_section > .job > .lazy-load-wrapper > .job_details >
     .job_period,
     .tech_used {
         font-size: 1rem;

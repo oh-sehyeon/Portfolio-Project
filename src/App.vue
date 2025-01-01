@@ -5,7 +5,6 @@
   <SkillSet />
   <ProjectsWorks />
   <ContactMe />
-  <BubbleAnimation />
 </template>
 
 <script>
@@ -15,7 +14,6 @@ import ProCareer from './components/ProCareer.vue'
 import SkillSet from './components/SkillSet.vue'
 import ProjectsWorks from './components/ProjectsWorks.vue'
 import ContactMe from './components/ContactMe.vue'
-import BubbleAnimation from './components/BubbleAnimation.vue'
 
 export default {
   name: 'App',
@@ -26,13 +24,13 @@ export default {
     SkillSet,
     ProjectsWorks,
     ContactMe,
-    BubbleAnimation,
   }
 }
 </script>
 
 <style>
 html {
+  position: relative;
   padding: 0;
   margin: 0;
   background-color: #08090D;
@@ -40,6 +38,7 @@ html {
 }
 
 body {
+  position: relative;
   margin: 0;
   padding: 0;
 }

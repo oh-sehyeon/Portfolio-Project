@@ -3,18 +3,29 @@
         <h4>Check out my latest Projects</h4>
         <div class="projects_container">
             <a v-for="(project, index) in projects" :key="index" :href="project.url" class="project" target="_blank">
-                <div :id="project.id"></div>
-                <div class="project_details">
-                    <p class="project_name">{{ project.name }}</p>
-                    <p class="project_info">{{ project.description }}</p>
-                </div>
+                <LazyLoad>
+                    <div :id="project.id"></div>
+                    <div class="project_details">
+                        <p class="project_name">{{ project.name }}</p>
+                        <p class="project_info">{{ project.description }}</p>
+                    </div>
+                </LazyLoad>
             </a>
         </div>
+        <BubbleAnimation />
     </section>
 </template>
 
 <script>
+import LazyLoad from './Global Functions/LazyLoad.vue'
+import BubbleAnimation from './Global Functions/BubbleAnimation.vue'
+
 export default {
+    components: {
+        LazyLoad,
+        BubbleAnimation,
+    },
+
     name: 'ProjectsWorks',
     data() {
         return {
@@ -65,6 +76,7 @@ export default {
 }
 
 #projectsWorks_section {
+    position: relative;
     box-sizing: border-box;
     display: flex;
     flex-direction: column;
@@ -87,9 +99,10 @@ export default {
     margin: 0 5%;
     padding: 2rem 2rem;
     box-shadow: inset 0 0 8px black;
+    z-index: 2;
 }
 
-#projectsWorks_section > .projects_container > .project {
+#projectsWorks_section > .projects_container > .project > .lazy-load-wrapper {
     display: flex;
     flex-direction: row;
     justify-content: flex-start;
@@ -108,7 +121,7 @@ export default {
     border-bottom: none;
 }
 
-#projectsWorks_section > .projects_container > .project > .project_details {
+#projectsWorks_section > .projects_container > .project > .lazy-load-wrapper > .project_details {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -116,13 +129,13 @@ export default {
     width: 100%;
 }
 
-#projectsWorks_section > .projects_container > .project > .project_details > .project_name {
+#projectsWorks_section > .projects_container > .project > .lazy-load-wrapper > .project_details > .project_name {
     font-weight: bold;
     font-size: 1.5rem;
     margin: 0;
 }
 
-#projectsWorks_section > .projects_container > .project > .project_details > .project_info {
+#projectsWorks_section > .projects_container > .project > .lazy-load-wrapper > .project_details > .project_info {
     font-size: .75rem;
     margin-top: 1rem;
     line-height: 150%;
@@ -181,26 +194,26 @@ export default {
         box-shadow: inset 0 0 10px black;
     }
 
-    #projectsWorks_section > .projects_container > .project {
+    #projectsWorks_section > .projects_container > .project > .lazy-load-wrapper {
         padding: 2rem 0;
         border-bottom: 1px solid black;
     }
 
-    #projectsWorks_section > .projects_container > .project > div {
+    #projectsWorks_section > .projects_container > .project > .lazy-load-wrapper > div {
         width: 20%;
         height: 10rem;
     }
 
-    #projectsWorks_section > .projects_container > .project > .project_details {
+    #projectsWorks_section > .projects_container > .project > .lazy-load-wrapper > .project_details {
         width: 80%;
         padding-left: 2rem;
     }
 
-    #projectsWorks_section > .projects_container > .project > .project_details > .project_name {
+    #projectsWorks_section > .projects_container > .project > .lazy-load-wrapper > .project_details > .project_name {
         font-size: 2rem;
     }
 
-    #projectsWorks_section > .projects_container > .project > .project_details > .project_info {
+    #projectsWorks_section > .projects_container > .project > .lazy-load-wrapper > .project_details > .project_info {
         font-size: 1rem;
     }
 }

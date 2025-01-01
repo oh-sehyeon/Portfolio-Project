@@ -10,6 +10,7 @@
 </template>
 
 <script>
+
 export default {
     name: 'ContactMe',
 }
@@ -18,6 +19,7 @@ export default {
 <style scoped>
 
 #contactme_section {
+    position: relative;
     box-sizing: border-box;
     background-color: #FAFAFA;
     width: 100%;

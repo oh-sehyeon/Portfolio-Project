@@ -13,18 +13,26 @@
             <div class="skill"><img src="../assets/skills/firebase.png" alt="Firebase Image"></div>
             <div class="skill"><img src="../assets/skills/sql.png" alt="SQL Image" class="resize"></div>
         </div>
+        <BubbleAnimation />
     </section>
 </template>
 
 <script>
+import BubbleAnimation from './Global Functions/BubbleAnimation.vue'
+
 export default {
     name: 'SkillSet',
+
+    components: {
+        BubbleAnimation,
+    }
 }
 </script>
 
 <style scoped>
 
 #skillset_section {
+    position: relative;
     background-color: #08090D;
     display: flex;
     flex-direction: column;
@@ -57,6 +65,7 @@ export default {
     grid-template-columns: repeat(4, 1fr); /* 4 columns */
     grid-template-rows: repeat(2, 1fr); /* 2 rows */
     box-shadow: inset 0 0 8px black;
+    z-index: 2;
 }
 
 #skillset_section > .skillset_container > .skill {
