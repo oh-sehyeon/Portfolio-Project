@@ -7,6 +7,9 @@
                 <li></li>
                 <li></li>
                 <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
             </ul>
         </div>
 </template>
@@ -96,13 +99,36 @@ export default {
     animation-delay: 3.5s;
 }
 
+.box-area li:nth-child(7) {
+    left: 25%;
+    width: 50px;
+    height: 50px;
+    animation-delay: 1.5s;
+    animation-duration: 11s;
+}
+
+.box-area li:nth-child(8) {
+    left: 33%;
+    width: 80px;
+    height: 80px;
+    animation-delay: 5.5s;
+}
+
+.box-area li:nth-child(9) {
+    left: 50%;
+    width: 100px;
+    height: 100px;
+    animation-delay: 2.5s;
+    animation-duration: 10s;
+}
+
 @keyframes animate {
     0% {
         transform: translateY(0) rotate(0deg);
         opacity: 1;
     }
     100% {
-        transform: translateY(-1000px) rotate(360deg);
+        transform: translateY(-1200px) rotate(360deg);
         opacity: 0;
     }
 }
@@ -110,7 +136,7 @@ export default {
 
 @media screen and (min-width: 769px) {
     .animation-area {
-        height: 130%;
+        height: 150%;
     }
 }
 </style>

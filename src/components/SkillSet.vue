@@ -60,7 +60,7 @@ export default {
 }
 
 #skillset_section > .skillset_container {
-    background-color: #FAFAFA;
+    background-color: #FEFEFE;
     display: grid;
     grid-template-columns: repeat(4, 1fr); /* 4 columns */
     grid-template-rows: repeat(2, 1fr); /* 2 rows */

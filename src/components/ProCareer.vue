@@ -30,7 +30,7 @@ export default {
                     logo: require('../assets/job_logos/ini-solutions_logo.png'),
                     title: 'Frontend Developer and Support',
                     period: '2024 - Now',
-                    techUsed: 'Vue, Node JS, Sass, POS Program issue troubleshooting, POS N/W issue management, User support'
+                    techUsed: 'Vue, Node JS, Sass, SQL, GIT, POS Program issue troubleshooting, POS N/W issue management, User support'
                 },
                 {
                     companyName: 'Valtech',
@@ -70,6 +70,14 @@ export default {
     box-shadow: inset 0 0 8px black;
 }
 
+#career_section > .job {
+    border-bottom: 1px dotted black;
+}
+
+#career_section > .job:last-child {
+    border-bottom: none;
+}
+
 #career_section > .job > .lazy-load-wrapper {
     box-sizing: border-box;
     width: 100%;
@@ -77,12 +85,8 @@ export default {
     flex-direction: row;
     justify-content: flex-start;
     align-items: center;
-    border-bottom: 1px solid black;
+    
     padding: 1rem 1rem 1rem 0;
-}
-
-#career_section > .job:last-child {
-    border-bottom: none;
 }
 
 #career_section > .job > .lazy-load-wrapper > img {

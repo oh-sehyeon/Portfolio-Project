@@ -31,6 +31,12 @@ export default {
         return {
             projects: [
                 {
+                    id: 'ini',
+                    name: 'INI POS Solutions',
+                    url: 'https://inipos.com/',
+                    description: 'Led the migration of the company website to a scalable, modern architecture using Vue.js, Node.js, and Firebase Storage, improving performance and user experience.'
+                },
+                {
                     id: 'colourfit',
                     name: 'ColourFit',
                     url: 'https://github.com/ansonsow/rhealm',
@@ -95,21 +101,16 @@ export default {
 }
 
 #projectsWorks_section > .projects_container {
-    background-color: #FAFAFA;
+    background-color: #FEFEFE;
     margin: 0 5%;
     padding: 2rem 2rem;
     box-shadow: inset 0 0 8px black;
     z-index: 2;
 }
 
-#projectsWorks_section > .projects_container > .project > .lazy-load-wrapper {
-    display: flex;
-    flex-direction: row;
-    justify-content: flex-start;
-    align-items: center;
-    width: 100%;
-    padding: 1rem 0;
-    border-bottom: .1px solid black;
+#projectsWorks_section > .projects_container > .project {
+    display: block;
+    border-bottom: 1px dotted black;
 }
 
 #projectsWorks_section > .projects_container > .project:first-child {
@@ -119,6 +120,15 @@ export default {
 #projectsWorks_section > .projects_container > .project:last-child {
     padding-bottom: 0;
     border-bottom: none;
+}
+
+#projectsWorks_section > .projects_container > .project > .lazy-load-wrapper {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    width: 100%;
+    padding: 1rem 0;
 }
 
 #projectsWorks_section > .projects_container > .project > .lazy-load-wrapper > .project_details {
@@ -147,6 +157,12 @@ export default {
     #peoplecars,
     #moviesapp {
         display:block;
+    }
+
+    #ini {
+        background-image: url('../assets/projects_images/ini-website.png');
+        background-size: cover;
+        background-position: center;
     }
 
     #colourfit {
@@ -196,7 +212,6 @@ export default {
 
     #projectsWorks_section > .projects_container > .project > .lazy-load-wrapper {
         padding: 2rem 0;
-        border-bottom: 1px solid black;
     }
 
     #projectsWorks_section > .projects_container > .project > .lazy-load-wrapper > div {
